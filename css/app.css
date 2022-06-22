@@ -11,14 +11,22 @@ a{
 .flex{
   display: flex;
 }
-
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: #FF6900;
+}
 
 .main-nav{
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color:#FF6900 ;
   color: white;
-  padding: 20px 0;
+  padding: 10px 10px;
+  max-width:1200px ;
+  margin: 0 auto;
+ 
 }
 .sex-choice > a{
   color: white;
@@ -28,13 +36,18 @@ a{
 .container{
   margin: 0 auto;
   max-width: 1200px;
-  flex-wrap: wrap;
-  padding-top: 60px;
 }
+.wrap{
+  flex-wrap: wrap;
+  padding-top: 150px;
+  
+}
+
 
 .item{
   width: calc(100% / 3);
   padding: 0px 10px;
+  margin-bottom: 60px;
   
 }
 .item .item-img{
@@ -54,12 +67,31 @@ a{
 }
 .item-top{
   position: relative;
+  background-size: contain;
 }
 .item-tag{
   position: absolute;
   left: 0;
-  bottom: 70px;
+  bottom: 45px;
   color: white;
+}
+#item1{
+  background-image: url(../img/1b.webp);
+}
+#item2{
+  background-image: url(../img/2b.webp);
+}
+#item3{
+  background-image: url(../img/3b.webp);
+}
+#item4{
+  background-image: url(../img/4b.webp);
+}
+#item5{
+  background-image: url(../img/5b.webp);
+}
+#item6{
+  background-image: url(../img/6b.webp);
 }
 .wishlist{
   position: absolute;
@@ -73,7 +105,53 @@ a{
 .wishlist > a{
   color: black;
 }
+.wishlist > a:hover{
+  color: red;
+  transition: 300ms; 
+  
+  
+}
 .item-brand{
   font-style: normal;
   font-weight: 300;
+}
+.item-price{
+  color: red;
+  font-weight: 600;
+  margin-right: 5px;
+}
+.item-old-price{
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.item-img:hover{
+opacity: 0;
+transition: 400ms ease-in-out;
+}
+footer{
+  background-color: #1A1A1A;
+  border-bottom: 2px solid white;
+}
+footer a{
+  color: white;
+  font-size: 12px;
+}
+
+ul, ol, li, menu{
+list-style: none;
+}
+.socials, .footer-info{
+gap: 10px;
+}
+
+.footer-title{
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+footer > .container{
+padding: 10px 10px;
+}
+footer > .flex{
+  justify-content: space-between;
 }
